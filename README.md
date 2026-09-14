@@ -34,22 +34,9 @@ A responsive, browser-based Age Calculator built with **HTML**, **CSS**, and **J
 
 ## 📂 Project Structure
 
+```age-calculator/
+├── index.html
+├── style.css
+├── age.js
+└── README.md
 ```
-responsive-age-calculator/
-├── index.html          # Main HTML file
-├── style.css           # Styles and responsive layout
-├── script.js           # App logic using Luxon
-├── package.json        # Project metadata & dependencies
-└── README.md           # Project documentation
-```
-
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## 🙌 Acknowledgments
-
-- [Luxon](https://moment.github.io/luxon/) for making date math painless.
-- Inspired by the need for a simple, accurate, and responsive age calculator tool.
-
