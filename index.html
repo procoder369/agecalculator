@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Calculate your exact age in years, months, and days." />
+    <title>Age Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="calculator" aria-labelledby="page-title">
+      <section class="intro">
+        <p class="eyebrow"><span></span> YOUR PERSONAL TIMELINE</p>
+        <h1 id="page-title">Age<br /><em>Calculator</em></h1>
+        <p class="description">Find out exactly how long your story has been unfolding.</p>
+        <div class="decorative-circle circle-one"></div>
+        <div class="decorative-circle circle-two"></div>
+      </section>
+
+      <section class="card" aria-label="Age calculator form">
+        <div class="card-heading">
+          <span class="calendar-icon" aria-hidden="true">&#128197;</span>
+          <div>
+            <p class="label">LET'S CALCULATE</p>
+            <h2>When were you born?</h2>
+          </div>
+        </div>
+
+        <form id="age-form" novalidate>
+          <label for="birthdate">Date of birth</label>
+          <input id="birthdate" name="birthdate" type="date" required />
+          <p class="error" id="error-message" role="alert"></p>
+          <button type="submit">Calculate my age <span aria-hidden="true">&rarr;</span></button>
+        </form>
+
+        <section class="result hidden" id="result" aria-live="polite">
+          <p class="label">YOU HAVE LIVED</p>
+          <div class="age-grid">
+            <div><strong id="years">0</strong><span>years</span></div>
+            <div><strong id="months">0</strong><span>months</span></div>
+            <div><strong id="days">0</strong><span>days</span></div>
+          </div>
+          <p class="birthday-note" id="birthday-note"></p>
+        </section>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.5.0/build/global/luxon.min.js"></script>
+    <script src="age.js"></script>
+  </body>
+</html>

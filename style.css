@@ -1,0 +1,68 @@
+:root {
+  --ink: #233041;
+  --muted: #687587;
+  --navy: #203e5b;
+  --orange: #ef704e;
+  --cream: #fffaf3;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  background: #f6f2eb;
+}
+
+.calculator {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(440px, 1.1fr);
+}
+
+.intro {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3rem, 9vw, 8.5rem) clamp(2rem, 9vw, 9rem);
+  color: #fff;
+  background: var(--navy);
+}
+
+.eyebrow, .label { letter-spacing: .12em; font-size: .72rem; font-weight: 700; }
+.eyebrow { display: flex; align-items: center; gap: .65rem; margin: 0 0 2rem; color: #d7e1e8; }
+.eyebrow span { width: 28px; height: 2px; background: var(--orange); }
+h1 { position: relative; margin: 0; font-family: "Playfair Display", serif; font-size: clamp(4rem, 8vw, 7.5rem); line-height: .91; letter-spacing: -.065em; }
+h1 em { color: #f7b85d; font-weight: inherit; }
+.description { position: relative; max-width: 300px; margin-top: 2rem; font-size: 1.06rem; line-height: 1.6; color: #d3dde5; }
+.decorative-circle { position: absolute; border: 1px solid rgba(255,255,255,.15); border-radius: 50%; }
+.circle-one { width: 340px; height: 340px; bottom: -120px; right: -120px; }
+.circle-two { width: 210px; height: 210px; bottom: -55px; right: -55px; border-color: rgba(247,184,93,.55); }
+
+.card { align-self: center; width: min(100% - 3rem, 570px); margin: 2rem auto; padding: clamp(2rem, 5vw, 4rem); background: #fff; box-shadow: 0 24px 60px rgba(52, 54, 51, .11); }
+.card-heading { display: flex; align-items: center; gap: 1rem; margin-bottom: 2.8rem; }
+.calendar-icon { display: grid; place-items: center; width: 45px; height: 45px; border-radius: 50%; color: var(--orange); background: #fff0eb; font-size: 1.5rem; }
+.label { margin: 0 0 .4rem; color: var(--orange); }
+h2 { margin: 0; font-family: "Playfair Display", serif; font-size: clamp(1.8rem, 3vw, 2.45rem); letter-spacing: -.04em; }
+label { display: block; margin-bottom: .6rem; font-size: .88rem; font-weight: 700; }
+input { width: 100%; padding: 1rem; border: 1px solid #d7dfe5; border-radius: 3px; color: var(--ink); font: inherit; outline: none; }
+input:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(239,112,78,.15); }
+.error { min-height: 1.25rem; margin: .4rem 0; color: #c53d35; font-size: .82rem; }
+button { width: 100%; margin-top: .4rem; padding: 1rem 1.2rem; border: 0; color: white; background: var(--orange); cursor: pointer; font: 700 1rem "DM Sans", sans-serif; transition: background .2s, transform .2s; }
+button:hover { background: #d96041; transform: translateY(-1px); }
+button span { float: right; font-size: 1.25rem; line-height: .8; }
+.result { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid #e7ebed; }
+.age-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 1rem; }
+.age-grid div { padding: .2rem 1rem; border-left: 1px solid #e2e7e9; }
+.age-grid div:first-child { padding-left: 0; border: 0; }
+.age-grid strong { display: block; color: var(--navy); font: 2.5rem/1 "Playfair Display", serif; }
+.age-grid span { color: var(--muted); font-size: .8rem; }
+.birthday-note { margin: 1.6rem 0 0; color: var(--muted); font-size: .9rem; }
+.hidden { display: none; }
+
+@media (max-width: 760px) {
+  .calculator { grid-template-columns: 1fr; }
+  .intro { min-height: 300px; padding: 3.5rem 2rem; }
+  .card { margin: -1rem auto 2rem; }
+}
